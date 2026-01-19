@@ -1,0 +1,325 @@
+.window-frame {
+    position: absolute;
+    border: 1px solid #000;
+    padding: 0.24%;
+    background-color: #aaa;
+    max-width: 50%;
+    max-height: 80%;
+}
+
+.window-frame-mobile {
+    position: absolute;
+    border: 1px solid #000;
+    padding: 0.24%;
+    background-color: #aaa;
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.window-frame-header {
+    display: flex;
+    height: 3vh;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #000;
+    background-color: #888;
+    color: #fff;
+    font-weight: bold;
+    font-size: 2vh;
+    cursor: grab;
+    padding: 0.3%;
+    padding-left: 1%;
+    padding-bottom: 0;
+}
+
+.window-frame-header.active {
+    background-color: #1c1fc7;
+}
+
+.window-frame-header.dragging {
+    cursor: grabbing;
+    background-color: #1416a5;
+}
+
+.window-frame-close-btn {
+    background: #bbb;
+    color: black;
+    border: 1px solid black;
+    border-radius: 0;
+    font-family: w95;
+    cursor: pointer;
+    font-size: 2vh;
+}
+
+.window-frame-body {
+    border: 1px solid black;
+    background-color: #ddd;
+    margin-top: 0.5%;
+}
+
+
+    /*      START MENU      */
+
+  .start-menu-btn-container {
+    margin-left: 60px;
+    margin-right: 10px;
+    padding-top: 0.7%
+  }
+
+  .start-menu-task-0 {
+    margin-top:7%;
+    border: none;
+    background-color: #888;
+    background-image: url('../assets/StartShutdown.webp');
+    min-width: 300px;
+    min-height: 64px;
+  }
+
+  .start-menu-task-0:hover {
+    background-image: url('../assets/StartShutdownHover.webp');
+  }
+
+  .start-menu-task-1 {
+    border: none;
+    background-color: #bbb;
+    background-image: url('../assets/StartGithub.jpg');
+    min-width: 300px; 
+    min-height: 64px;
+  }
+
+  .start-menu-task-1:hover {
+    background-image: url('../assets/StartGitHubHover.jpg');
+  }
+
+  .start-menu-task-2 {
+    border: none;
+    background-color: #bbb;
+    background-image: url('../assets/StartAbout.jpg');
+    min-width: 300px;
+    min-height: 64px;
+  }
+
+  .start-menu-task-2:hover {
+    background-image: url('../assets/StartAboutHover.jpg');
+  }
+
+  .start-menu-task-3 {
+    border: none;
+    background-color: #888;
+    background-image: url('../assets/StartMusic.webp');
+    min-width: 300px;
+    min-height: 64px;
+  }
+
+  .start-menu-task-3:hover {
+    background-image: url('../assets/StartMusicHover.webp');
+  }
+
+  .start-menu-task-4 {
+    border: none;
+    background-color: #888;
+    background-image: url('../assets/StartGallery.webp');
+    min-width: 300px;
+    min-height: 64px;
+  }
+
+  .start-menu-task-4:hover {
+    background-image: url('../assets/StartGalleryHover.webp');
+  }
+
+  .start-menu-task-5 {
+    border: none;
+    background-color: #888;
+    
+    background-image: url('../assets/StartGames.webp');
+    min-width: 300px;
+    min-height: 64px;
+  }
+
+  .start-menu-task-5:hover {
+    background-image: url('../assets/StartGamesHover.webp');
+  }
+
+  .start-menu-task-6 {
+    margin-top: 5%;
+    border: none;
+    background-color: #888;
+    background-image: url('../assets/StartPaint.webp');
+    min-width: 300px;
+    min-height: 64px;
+  }
+
+  .start-menu-task-6:hover {
+    background-image: url('../assets/StartPaintHover.webp');
+  }
+
+
+    /*      ABOUT PAGE       */
+
+
+.about-wrapper {
+  display:flex;
+  flex-direction: row;
+  padding: 1%;
+  gap: 1%;
+  flex-shrink: 1;
+}
+
+.about-div-side {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-pfp {
+    height: fit-content;
+    max-width: 100%;
+    border: 1px solid black;
+}
+
+.about-div-links {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+    font-size: 2vh;
+    padding: 5%;
+}
+
+.about-div-links p {
+  margin: 1vh;
+ }
+
+.about-div-links p:hover {
+  color: #555;
+  cursor: pointer;
+}
+
+.about-body {
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+    background-color: #bbb;
+    border: solid 1px black;
+    padding: 10px;
+}
+
+.about-div-upper {
+    flex-grow: 1;
+}
+
+.about-div-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-div-text h1 {
+  font-size: 4vh;
+  font-weight: bold;
+}
+
+.about-div-bio{
+  font-weight: bold;
+  text-align: center;
+}
+
+.about-div-bio p{
+  margin: 0;
+  font-size: 1.0rem;
+  line-height: 4pt;
+  font-weight: bold;
+}
+
+.about-div-bio h3{
+  line-height: 16pt;
+}
+
+.about-div-lower {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+.about-div-lower h4{
+  grid-area: 1 / 1;
+  font-size: 1.4vh;
+  width: 40%;
+}
+
+.about-pic {
+  z-index: 1;
+  grid-area: 1 / 1;
+  width: auto;
+  max-width: 100%;
+}
+
+
+    /*      MUSIC PAGE          */
+
+
+.music-wrapper {
+  display:flex;
+  flex-direction: row;
+   padding: 1%;
+  flex-shrink: 1;
+}
+
+.music-body {
+  display: flex;
+  flex-direction: column;
+  background-color: #bbb;
+  border: solid 1px black;
+  padding: 10px;
+  font-size: 0.8rem;
+  text-align: center;
+  max-width: 70%;
+  min-width: 0;
+}
+
+.music-div-side {
+  display: flex;
+  flex-direction: column;
+  max-width: 30%;
+  min-width: 0;
+  padding:10px;
+}
+
+.music-div-side p {
+  line-height: 14pt;
+}
+
+
+    /*      PAINT PAGE          */
+
+    
+.paint-body {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    background-color: #ddd;
+}
+
+.paint-upper-div {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    background-color: red;
+    min-height: 400px;
+}
+
+.paint-tool-div {
+    flex-grow: 1;
+    max-width: 20%;
+    background-color: purple;
+}
+
+.paint-canvas-div {
+    flex-grow: 1;
+    background-color: blue;
+}
+
+.paint-color-div {
+    background-color: green;
+    max-height: 20%;
+}

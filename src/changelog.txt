@@ -1,0 +1,4 @@
+Version 0.2 - 12/14/2025
+    full rewrite from the ground up
+    added support for mobile browsers
+    optimizations
