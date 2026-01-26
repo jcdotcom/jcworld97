@@ -1,7 +1,7 @@
 
 ~ ~~ ~~~ { jcworld97 } ~~~ ~~ ~
 
-  My React+TypeScript webapp for my personal webpage ~{ [jcworld.org](https://jcworld.org/) }~
+  My React+TypeScript webapp for my personal webpage ~~~ { [jcworld.org](https://jcworld.org/) } ~~~
 
 ===[ Changelog ]===
   
