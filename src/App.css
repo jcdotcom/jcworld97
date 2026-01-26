@@ -28,14 +28,6 @@
     display: flex;
 }
 
-.desktop-element-wrapper {
-    /* height: 100vh; */
-    display: flex;
-    /* flex-direction: row; */
-    /* flex-grow: 1; */
-    /* align-content: baseline; */
-}
-
 .bug-pic {
     position: absolute;
     bottom: 8vh; right: 1vw;
@@ -54,31 +46,18 @@
 
 .app-start-menu {
   position: absolute;
-  /* position-anchor: --task-anchor; */
-  /* position-area: bottom; */
   bottom: 0;
   left: 0;
-  /* margin-top: 10vh; */
-  /* vertical-align: bottom; */
   width: 50vh;
   min-width: 16vw;
   max-width: 100vw;
-  /* height: auto; */
   display: flex;
-  /* flex-grow: 1; */
-  /* padding: 0; margin: 0; border: 0; */
-  /* max-width: 54vw; */
-  /* min-height: 540px; */
   margin-bottom: 6.2vh;
-  /* height: fit-content; */
   max-height: 70vh;
-  /* align-items:baseline; */
-  /* flex-grow: 1; */
   z-index: 1000;
   background-image: url('./assets/StartMenuBG.webp');
   background-size: contain;
   background-repeat: no-repeat;
-  /* background-color: red; */
 }
 
         /* TASK BAR */
@@ -96,9 +75,7 @@
 
 .task-bar {
     display: flex;
-    /* gap: 5px; */
     gap: 0.3%;
-    /* margin: 5px; */
     margin: 0.6vh;
     height: 5vh;
     max-height: 5vh;
@@ -148,7 +125,6 @@
 
 .btn-text {
     margin: 0;
-    /* justify-content: center; */
     color: black;
     font-size: 3vh;
     font-family: w95;

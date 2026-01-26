@@ -1,5 +1,4 @@
 import StartMenuBtn from './StartMenuBtn';
-//import startMenuBG from '../assets/StartMenuBg.jpg';
 import paintIcon from '../assets/StartIcon_paint.webp';
 import gamesIcon from '../assets/StartIcon_games.webp';
 import galleryIcon from '../assets/StartIcon_gallery.webp';
@@ -21,7 +20,6 @@ export const START_MENU_BUTTONS: StartMenuButton[] = [
   { id: 3, title: 'Music', icon: musicIcon },
   { id: 1, title: 'Github', icon: githubIcon },
   { id: 2, title: 'About', icon: aboutIcon },
-  //{ id: 0, title: 'Shutdown', icon: shutdownIcon },
 ];
 
 interface StartMenuProps {

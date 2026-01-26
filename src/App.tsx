@@ -3,7 +3,7 @@
        my react webapp for my personal webpage ~{ www.jcworld.org }~
 
         0.22 - 01/26/2026 - optimized and improved start menu, added bug report menu,
-                            more work on mobile view
+                            more work on mobile view, starting to build out gallery
                                 new components {
                                     BugReportPage
                                 }
@@ -55,7 +55,10 @@ export default function App({onMobile}: AppProps){
 
     const startOpen = () =>{
         setStartVisible(!startIsVisible);
-        console.log("visible?",startIsVisible)
+    }
+
+    const startClose = () =>{
+        setStartVisible(false);
     }
 
     const startAction = (key: number) => {
@@ -142,7 +145,7 @@ export default function App({onMobile}: AppProps){
 
     return(
         <body className={"app-layout"}>
-            <main className="app-desktop">
+            <main onClick={()=>startClose()} className="app-desktop">
                 <p className="watermark">jcworld.org</p>
                 <div className="app-desktop-window-space">
                     { programs.map((program) => (
@@ -159,36 +162,31 @@ export default function App({onMobile}: AppProps){
                     }
                 </div>
             </main>
-            <div className="desktop-element-wrapper">
-                <div className="task-bar-wrapper">
-                    <div className="task-bar">
-                        <div onClick={()=>startOpen()} className="start-btn" />
-                        <div className="task-btn-wrapper">
-                            {!onMobile && programs.map((task) => (
-                            <div onClick={()=>handleClick(task.id)} className="task-btn">
-                                <p className="btn-text">{task.title}</p>
-                            </div>                            
-                            ))}
-                        </div>
-                        <div className="clock-layout">
-                            <div className="clock">
-                                <p className="clock-text">{time.toLocaleTimeString().substring(0,11)}</p>
-                            </div>
-                        </div>
-                        
+            <div className="task-bar-wrapper">
+                <div className="task-bar">
+                    <div onClick={()=>startOpen()} className="start-btn" />
+                    <div className="task-btn-wrapper">
+                        {!onMobile && programs.map((task) => (
+                        <div onClick={()=>handleClick(task.id)} className="task-btn">
+                            <p className="btn-text">{task.title}</p>
+                        </div>                            
+                        ))}
                     </div>
-                    
-                    
+                    <div className="clock-layout">
+                        <div className="clock">
+                            <p className="clock-text">{time.toLocaleTimeString().substring(0,11)}</p>
+                        </div>
+                    </div>
                 </div>
-                {startIsVisible && imageLoaded && <div className="app-start-menu">
-                    <StartMenu 
-                        onToggle={startAction}
-                        onStartClose={startOpen}
-                    />
-                    </div>}
-                {!onMobile && <img src={bug} alt="bug" className="bug-pic" onClick={handleBugClick}/>}
-                {onMobile && <img src={bug} alt="bug" className="bug-pic-mobile" onClick={handleBugClick}/>}
             </div>
+            {startIsVisible && imageLoaded && <div className="app-start-menu">
+                <StartMenu 
+                    onToggle={startAction}
+                    onStartClose={startOpen}
+                />
+                </div>}
+            {!onMobile && <img src={bug} alt="bug" className="bug-pic" onClick={handleBugClick}/>}
+            {onMobile && <img src={bug} alt="bug" className="bug-pic-mobile" onClick={handleBugClick}/>}
         </body>
     );
 }

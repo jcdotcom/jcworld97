@@ -3,8 +3,8 @@
     border: 1px solid #000;
     padding: 0.24%;
     background-color: #aaa;
-    max-width: 50%;
-    max-height: 80%;
+    max-width: 50vw;
+    max-height: 80vh;
 }
 
 .window-frame-mobile {
@@ -12,8 +12,8 @@
     border: 1px solid #000;
     padding: 0.24%;
     background-color: #aaa;
-    max-width: 80%;
-    max-height: 80%;
+    max-width: 80vw;
+    max-height: 80vh;
 }
 
 .window-frame-header {
@@ -64,7 +64,6 @@
     display: flex;
     flex-direction: column;
     width: 86%;
-    /* gap: 1%; */
   }
 
   .start-menu-btn {
@@ -74,10 +73,8 @@
     font-size: 3vh;
     max-height: 11.5%;
     width: 90%;
-    /* background-color: transparent; */
     background-color: #cccccc;
     border: 0;
-    /* text-align: center; */
     margin-left: 18.4%;
     margin-top: 3%;
     align-items: center;
@@ -104,10 +101,10 @@
 .about-wrapper {
   display:flex;
   flex-direction: row;
-  padding: 1%;
-  gap: 1%;
+  padding: 1vh;
+  gap: 1vh;
   flex-shrink: 1;
-  flex-basis: content;
+  max-width:min-content;
 }
 
 .about-div-side {
@@ -117,8 +114,6 @@
 }
 
 .about-pfp {
-    /* height: fit-content; */
-    /* max-width: 100%; */
     border: 1px solid black;
 }
 
@@ -155,11 +150,8 @@
 .about-div-text {
     display: flex;
     flex-direction: column;
-}
-
-.about-div-text h1 {
-  font-size: 4vh;
-  font-weight: bold;
+    font-size: calc(100% + 4vw);
+    font-weight: bold;
 }
 
 .about-div-bio{
@@ -203,9 +195,9 @@
 
 .music-wrapper {
   display:flex;
-  flex-direction: row;
-   padding: 1%;
-  flex-shrink: 1;
+  padding: 1vh;
+  gap: 1vh;
+  max-width:min-content;
 }
 
 .music-body {
@@ -214,26 +206,97 @@
   background-color: #bbb;
   border: solid 1px black;
   padding: 1%;
-  font-size: 0.8rem;
-  text-align: center;
-  max-width: 70%;
+  font-size: 3vh;
+  font-weight: bold;
+  width: 70%;
   min-width: 0;
 }
 
 .music-pic {
-
+  max-width: 50vh;
 }
 
 .music-div-side {
   display: flex;
   flex-direction: column;
-  max-width: 30%;
+  width: 30%;
   min-width: 0;
   padding:1%;
+  font-size: 2.4vh;
 }
 
-.music-div-side p {
-  line-height: 14pt;
+.music-pfp {
+  max-width: 20vh;
+}
+
+
+    /*      GALLERY PAGE          */
+
+
+.gallery-wrapper {
+  display:flex;
+  flex-direction: column;
+  padding: 1vh;
+  gap: 1vh;
+  height: 40%;
+  max-height: 60vh;
+}
+
+.gallery-header {
+  display: flex;
+  flex-direction: column;
+  line-height: 0;
+  font-size: 2.4vh;
+}
+
+.gallery-body {
+  display: flex;
+  flex-direction: row;
+  background-color: #bbb;
+  border: solid 1px black;
+  overflow: hidden;
+}
+
+.gallery-scroller {
+  min-width: 40vw;
+  display: grid;
+  grid-template-columns: auto auto;
+  overflow: hidden scroll;
+  padding-top: 1vh;
+}
+
+.gallery-img {
+  align-self: center;
+  justify-self: center;
+  width: 90%;
+  margin: 2%;
+  border: solid 1px black;
+  cursor: pointer;
+}
+
+.gallery-img:hover {
+  border: solid 1px #888888;
+}
+
+.gallery-pfp {
+  max-width: 20vh;
+}
+
+
+    /*      GALLERY VIEWER PAGE          */
+
+
+.gallery-viewer-wrapper {
+  display:flex;
+  flex-direction: column;
+}
+
+.gallery-viewer-body {
+  display: flex;
+}
+
+.gallery-viewer-img {
+  display: flex;
 }
 
 
@@ -276,26 +339,24 @@
 
 .bug-wrapper {
   display:flex;
-  flex-direction: row;
-  padding: 3%;
-  gap: 3%;
-  flex-shrink: 1;
-  flex-basis: content;
+  padding: 1vh;
+  gap: 1vh;
+}
+
+.bug-div-side {
+  display: flex;
 }
 
 .bug-report-pic {
   border: solid 1px black;
-  max-height: 16vh;
+  max-height: 14vh;
 }
 
 .bug-body {
-  display: flex;
-  flex-direction: column;
   background-color: #bbb;
   border: solid 1px black;
   padding: 2%;
   font-size: 1vh;
   text-align: center;
-  max-width: 70%;
-  min-width: 0;
+  width: 70%;
 }

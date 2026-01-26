@@ -23,7 +23,7 @@ const AboutPage = () => {
         <div className="about-body">
           <div className="about-div-upper">
             <div className="about-div-text">
-              <h1>JCWORLD.ORG</h1>
+              <p>JCWORLD.ORG</p>
               <div className="about-div-bio">
                 
               </div>
@@ -32,7 +32,7 @@ const AboutPage = () => {
           <div className="about-div-lower">
             <img src={cat2} alt="pic" className="about-pic" />
             <h4>ver 0.22 - 01/26/2026<br/>
-            Start Menu is way more optimized now!</h4>
+            The Gallery has arrived! Start Menu is way more optimized now too</h4>
           </div>
         </div>
       </div>
