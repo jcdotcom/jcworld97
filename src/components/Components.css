@@ -60,99 +60,43 @@
 
     /*      START MENU      */
 
-  .start-menu-btn-container {
-    margin-left: 60px;
-    margin-right: 10px;
-    padding-top: 0.7%
+  .start-menu {
+    display: flex;
+    flex-direction: column;
+    width: 86%;
+    /* gap: 1%; */
   }
 
-  .start-menu-task-0 {
-    margin-top:7%;
-    border: none;
-    background-color: #888;
-    background-image: url('../assets/StartShutdown.webp');
-    min-width: 300px;
-    min-height: 64px;
+  .start-menu-btn {
+    display: flex;
+    flex-grow: 1;
+    font-family: w95;
+    font-size: 3vh;
+    max-height: 11.5%;
+    width: 90%;
+    /* background-color: transparent; */
+    background-color: #cccccc;
+    border: 0;
+    /* text-align: center; */
+    margin-left: 18.4%;
+    margin-top: 3%;
+    align-items: center;
+    gap: 6%;
   }
 
-  .start-menu-task-0:hover {
-    background-image: url('../assets/StartShutdownHover.webp');
+  .start-menu :hover {
+    background-color: #1f2676;
+    color: #fff;
   }
 
-  .start-menu-task-1 {
-    border: none;
-    background-color: #bbb;
-    background-image: url('../assets/StartGithub.jpg');
-    min-width: 300px; 
-    min-height: 64px;
+  .start-menu-btn-icon {
+    max-height: 70%;
+    margin-left: 4%;
   }
 
-  .start-menu-task-1:hover {
-    background-image: url('../assets/StartGitHubHover.jpg');
+  .start-menu-btn-text {
+    margin-top: 3%;
   }
-
-  .start-menu-task-2 {
-    border: none;
-    background-color: #bbb;
-    background-image: url('../assets/StartAbout.jpg');
-    min-width: 300px;
-    min-height: 64px;
-  }
-
-  .start-menu-task-2:hover {
-    background-image: url('../assets/StartAboutHover.jpg');
-  }
-
-  .start-menu-task-3 {
-    border: none;
-    background-color: #888;
-    background-image: url('../assets/StartMusic.webp');
-    min-width: 300px;
-    min-height: 64px;
-  }
-
-  .start-menu-task-3:hover {
-    background-image: url('../assets/StartMusicHover.webp');
-  }
-
-  .start-menu-task-4 {
-    border: none;
-    background-color: #888;
-    background-image: url('../assets/StartGallery.webp');
-    min-width: 300px;
-    min-height: 64px;
-  }
-
-  .start-menu-task-4:hover {
-    background-image: url('../assets/StartGalleryHover.webp');
-  }
-
-  .start-menu-task-5 {
-    border: none;
-    background-color: #888;
-    
-    background-image: url('../assets/StartGames.webp');
-    min-width: 300px;
-    min-height: 64px;
-  }
-
-  .start-menu-task-5:hover {
-    background-image: url('../assets/StartGamesHover.webp');
-  }
-
-  .start-menu-task-6 {
-    margin-top: 5%;
-    border: none;
-    background-color: #888;
-    background-image: url('../assets/StartPaint.webp');
-    min-width: 300px;
-    min-height: 64px;
-  }
-
-  .start-menu-task-6:hover {
-    background-image: url('../assets/StartPaintHover.webp');
-  }
-
 
     /*      ABOUT PAGE       */
 
@@ -163,6 +107,7 @@
   padding: 1%;
   gap: 1%;
   flex-shrink: 1;
+  flex-basis: content;
 }
 
 .about-div-side {
@@ -172,18 +117,16 @@
 }
 
 .about-pfp {
-    height: fit-content;
-    max-width: 100%;
+    /* height: fit-content; */
+    /* max-width: 100%; */
     border: 1px solid black;
 }
 
 .about-div-links {
-    flex-grow: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
     font-weight: bold;
-    font-size: 2vh;
+    font-size: 3vh;
     padding: 5%;
 }
 
@@ -202,7 +145,7 @@
     flex-direction: column;
     background-color: #bbb;
     border: solid 1px black;
-    padding: 10px;
+    padding: 1%;
 }
 
 .about-div-upper {
@@ -243,7 +186,7 @@
 
 .about-div-lower h4{
   grid-area: 1 / 1;
-  font-size: 1.4vh;
+  font-size: 2vh;
   width: 40%;
 }
 
@@ -270,11 +213,15 @@
   flex-direction: column;
   background-color: #bbb;
   border: solid 1px black;
-  padding: 10px;
+  padding: 1%;
   font-size: 0.8rem;
   text-align: center;
   max-width: 70%;
   min-width: 0;
+}
+
+.music-pic {
+
 }
 
 .music-div-side {
@@ -282,7 +229,7 @@
   flex-direction: column;
   max-width: 30%;
   min-width: 0;
-  padding:10px;
+  padding:1%;
 }
 
 .music-div-side p {
@@ -296,7 +243,7 @@
 .paint-body {
     display: flex;
     flex-direction: column;
-    margin: 0px;
+    margin: 0;
     background-color: #ddd;
 }
 
@@ -305,7 +252,7 @@
     flex-direction: row;
     flex-grow: 1;
     background-color: red;
-    min-height: 400px;
+    /* min-height: 400px; */
 }
 
 .paint-tool-div {
@@ -322,4 +269,33 @@
 .paint-color-div {
     background-color: green;
     max-height: 20%;
+}
+
+
+    /*      BUG REPORT PAGE          */
+
+.bug-wrapper {
+  display:flex;
+  flex-direction: row;
+  padding: 3%;
+  gap: 3%;
+  flex-shrink: 1;
+  flex-basis: content;
+}
+
+.bug-report-pic {
+  border: solid 1px black;
+  max-height: 16vh;
+}
+
+.bug-body {
+  display: flex;
+  flex-direction: column;
+  background-color: #bbb;
+  border: solid 1px black;
+  padding: 2%;
+  font-size: 1vh;
+  text-align: center;
+  max-width: 70%;
+  min-width: 0;
 }

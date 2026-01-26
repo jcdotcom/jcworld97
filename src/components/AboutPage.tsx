@@ -31,8 +31,8 @@ const AboutPage = () => {
           </div>
           <div className="about-div-lower">
             <img src={cat2} alt="pic" className="about-pic" />
-            <h4>ver 0.21 - 01/13/2026<br/>
-            Everything should be re-sizing dynamically now</h4>
+            <h4>ver 0.22 - 01/26/2026<br/>
+            Start Menu is way more optimized now!</h4>
           </div>
         </div>
       </div>

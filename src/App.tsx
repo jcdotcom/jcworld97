@@ -2,6 +2,11 @@
     ~ ~~ ~~~ jcworld97 ~~~ ~~ ~
        my react webapp for my personal webpage ~{ www.jcworld.org }~
 
+        0.22 - 01/26/2026 - optimized and improved start menu, added bug report menu,
+                            more work on mobile view
+                                new components {
+                                    BugReportPage
+                                }
         0.21 - 01/13/2026 - most things scale dynamically now, more work on mobile view
         0.20 - 12/14/2025 - complete re-write:  the cleaner and more dynamic edition
                                 new components { 
@@ -20,9 +25,10 @@ import MusicPage from './components/MusicPage';
 import GalleryPage from './components/GalleryPage';
 import GamesPage from './components/GamesPage';
 import PaintPage from './components/PaintPage';
+import BugReportPage from './components/BugReportPage';
 import './App.css';
 import bug from './assets/bug.gif';
-import startMenuBG from './assets/StartMenuBg.jpg';
+import startMenuBG from './assets/StartMenuBG.webp';
 
 interface AppProps {
     onMobile: boolean;
@@ -36,15 +42,20 @@ export default function App({onMobile}: AppProps){
         preload(startMenuBG);
         const img = new Image();
         img.src = startMenuBG;
+        img.onload = () => {
+            setImageLoaded(true);
+        }
     }, []);
     
 
 //----------------[ START MENU FUNCTIONS ]----------------//
 
     const [startIsVisible, setStartVisible] = useState(false);
+    const [imageLoaded, setImageLoaded] = useState(false);
 
     const startOpen = () =>{
         setStartVisible(!startIsVisible);
+        console.log("visible?",startIsVisible)
     }
 
     const startAction = (key: number) => {
@@ -92,6 +103,10 @@ export default function App({onMobile}: AppProps){
                     newProgram.content = <PaintPage />; 
                     newProgram.title = "Paint";
                     break;
+                case 6:
+                    newProgram.content = <BugReportPage />;
+                    newProgram.title = "Report a Bug";
+                    break;
             }
             setPrograms(prev => [...prev, newProgram]);
             setCurrentActive(key);
@@ -109,7 +124,7 @@ export default function App({onMobile}: AppProps){
     }
 
     function handleBugClick(){
-        alert("dont even think about it");
+        openProgram(6);
     }
 
 //----------------[ CLOCK FUNCTIONS ]----------------//
@@ -160,22 +175,17 @@ export default function App({onMobile}: AppProps){
                                 <p className="clock-text">{time.toLocaleTimeString().substring(0,11)}</p>
                             </div>
                         </div>
+                        
                     </div>
+                    
+                    
                 </div>
-                {/* idk if the below is actually faster to load the image or not */}
-                {startIsVisible && <div className="app-start-menu">
-                
-                    <img src={startMenuBG} loading="eager" style={{gridArea:'1/1'}}/>
-                    <div style={{gridArea:'1/1'}}>
-                        <StartMenu 
-                            onToggle={startAction}
-                            onStartClose={startOpen}
-                            startTaskButtonKeys={[
-                                6,5,4,3,2,1,0
-                            ]}
-                        />
-                    </div>
-                </div>}
+                {startIsVisible && imageLoaded && <div className="app-start-menu">
+                    <StartMenu 
+                        onToggle={startAction}
+                        onStartClose={startOpen}
+                    />
+                    </div>}
                 {!onMobile && <img src={bug} alt="bug" className="bug-pic" onClick={handleBugClick}/>}
                 {onMobile && <img src={bug} alt="bug" className="bug-pic-mobile" onClick={handleBugClick}/>}
             </div>
