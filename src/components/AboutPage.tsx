@@ -1,4 +1,4 @@
-import flop from '../assets/ef3.jpg';
+import pfp from '../assets/pfp.png';
 import cat2 from '../assets/cat2.gif';
 import './Components.css';
 
@@ -14,7 +14,7 @@ const AboutPage = () => {
     return(
       <div className="about-wrapper">
         <div className="about-div-side">
-          <img src={flop} alt="pic" className="about-pfp"/>
+          <img src={pfp} alt="pic" className="about-pfp"/>
           <div className="about-div-links">
             <p onClick={handleGitHubClick}>github</p> {/* TODO add thumbnails here */}
             <p onClick={handleInquiriesClick}>inquiries</p>

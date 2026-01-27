@@ -4,7 +4,7 @@ import './Components.css';
 const BugReportPage = () => {
 
   const handleReportClick = () => {
-    window.open("mailto:jayceew@pm.me", "_blank");
+    window.open("mailto:jayceew@pm.me?subject=jcworld.org bug report", "_blank");
   }
     return(
       <div className="bug-wrapper">
