@@ -150,8 +150,10 @@
 .about-div-text {
     display: flex;
     flex-direction: column;
-    font-size: calc(100% + 4vw);
+    font-size: 5vw;
     font-weight: bold;
+    
+    overflow: hidden;
 }
 
 .about-div-bio{
@@ -185,7 +187,7 @@
 .about-pic {
   z-index: 1;
   grid-area: 1 / 1;
-  width: auto;
+  width: 100%;
   max-width: 100%;
 }
 
